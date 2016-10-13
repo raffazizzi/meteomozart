@@ -1,0 +1,25 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Mozart K. 333 - Where you are</title>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="lib/verovio-toolkit-light.js"></script>
+        <script src="src/index.js"> </script>
+    </head>
+    <body>
+      <div id="title" style="float: left">
+        <h4>Mozart K. 333 - Where you are</h4>
+      </div>
+        <div id="info" style="float:right">
+          <em>Location</em>: <span id="location"></span><br/>
+          <em>Weather</em>: <span id="weather"></span><br/>
+          <em>Slurs and dynamics from</em>: <span id="slurs"></span>
+          <hr/>
+          <div id="change">
+            Set weather location: <input type="text" value="Vienna, Austria" id="newLoc"/> <button id="changeWeather">Go</buttom>
+          </div>
+        </div>
+        <div id="loading" style="padding-top: 5em">Loading score...</div>
+        <div id="output"></div>
+    </body>
+</html>
