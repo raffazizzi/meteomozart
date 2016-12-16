@@ -14,7 +14,7 @@
             <mdiv>
                 <score>
                     <scoreDef>
-                        <staffGrp>
+                        <staffGrp symbol="brace">
                             <staffDef key.sig="2f" 
                                       clef.shape="G"
                                       clef.line="2"
