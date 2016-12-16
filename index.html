@@ -1,25 +1,83 @@
 <!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Mozart K. 333 - Where you are</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+
+        <title>Meteomozart - Piano Sonata K. 333</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="css/theme.css" rel="stylesheet"/>
+        <link href="css/weather-icons.min.css" rel="stylesheet"/>
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="lib/verovio-toolkit-light.js"></script>
         <script src="src/index.js"> </script>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
     </head>
-    <body>
-      <div id="title" style="float: left">
-        <h4>Mozart K. 333 - Where you are</h4>
-      </div>
-        <div id="info" style="float:right">
-          <em>Location</em>: <span id="location"></span><br/>
-          <em>Weather</em>: <span id="weather"></span><br/>
-          <em>Slurs and dynamics from</em>: <span id="slurs"></span>
-          <hr/>
-          <div id="change">
-            Set weather location: <input type="text" value="Vienna, Austria" id="newLoc"/> <button id="changeWeather">Go</buttom>
+    <body id="page-top" class="index">
+
+      <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+
+            <div class="col-md-9 col-xs-7">
+                <a class="navbar-brand" href="#page-top">Meteomozart<span class="xl-only"> — Mozart's Piano Sonata K. 333 by the weather</span></a>
+            </div>
+
+            <ul id="menu" class="list-inline list-unstyled col-md-3 col-xs-5 text-right">
+                <li class="page-scroll">
+                    <a href="http://itisnotsound.com">About</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="https://github.com/raffazizzi/meteomozart">Code</a>
+                </li>
+            </ul>
+        </div>
+        <div id="tools">
+          <div class="container">
+            <div id="info" class="col-md-8 col-xs-3">
+              <i id="weather" class="app-info wi"></i>
+              <span id="info-rest">
+                <span id="location" class="app-info app-info-nosm truncate"></span>
+                <span id="slursinfo" class="app-info app-info-nosm">
+                  <img src="images/slursdyns.svg" alt="Slurs and dynamics:" width="30px" title="Source of slurs and dynamics"/>
+                  <span id="slurs"></span>
+                </span>
+              </span>
+            </div>
+            <div class="col-md-4 col-xs-9 text-right">
+              <div id="mm_dropdown" class="btn-group">
+                <button type="button" class="app-info btn dropdown-toggle"
+                data-toggle="dropdown">
+                  <span class="xl-only">Go to measure</span> <img class="xs-only" src="images/measure.png" width="40px"/></span>
+                </button>
+                <ul class="dropdown-menu scrollable-menu" id="measurelist">
+                </ul>
+              </div>
+              <span id="locchange" class="app-info btn">Change location</span>
+              <div id="locinput" class="input-group">
+                <input type="text" class="app-info form-control" placeholder="Vienna, Austria">
+                <span id="locgo" class="app-info btn input-group-addon">Go</span>
+              </div>
           </div>
         </div>
-        <div id="loading" style="padding-top: 5em">Loading score...</div>
+    </nav>
+
+      <div id="content">
+        <div class="pageAreaControl" id="prevArea"></div>
+        <div class="pageAreaControl" id="nextArea"></div>
+        <div id="loading">Loading score <img src="images/loading.gif"/></div>
         <div id="output"></div>
+      </div>
+
     </body>
 </html>

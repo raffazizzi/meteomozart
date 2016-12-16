@@ -17,6 +17,9 @@ app.get("/", function(req, res) {
 })
 
 app.use('/src', express.static('src'));
+app.use('/css', express.static('css'));
+app.use('/font', express.static('font'));
+app.use('/images', express.static('images'));
 app.use('/node_modules', express.static('node_modules'));
 app.use('/lib', express.static('lib'));
 app.use('/data', express.static('data'));
