@@ -4,8 +4,8 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="">
-      <meta name="author" content="">
+      <meta name="description" content="Meteomozart - Mozart's piano sonata K. 333 by the weather">
+      <meta name="author" content="Raff Viglianti">
 
         <title>Meteomozart - Piano Sonata K. 333</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -30,21 +30,23 @@
         <div class="container">
 
             <div class="col-md-9 col-xs-7">
-                <a class="navbar-brand" href="#page-top">Meteomozart<span class="xl-only"> — Mozart's Piano Sonata K. 333 by the weather</span></a>
+              <span class="navbar-brand">Meteomozart<span class="xl-only"> — Mozart's Piano Sonata K. 333 by the weather</span>
+                <br/><span id="credits">Powered by <a href="http://verovio.org"/>Verovio</a> and <a href="https://darksky.net/poweredby/">Dark Sky</a></span>
+              </span>
             </div>
 
             <ul id="menu" class="list-inline list-unstyled col-md-3 col-xs-5 text-right">
-                <li class="page-scroll">
+                <li>
                     <a href="http://itisnotsound.com">About</a>
                 </li>
-                <li class="page-scroll">
+                <li>
                     <a href="https://github.com/raffazizzi/meteomozart">Code</a>
                 </li>
             </ul>
         </div>
         <div id="tools">
           <div class="container">
-            <div id="info" class="col-md-8 col-xs-3">
+            <div id="info" class="col-md-8 col-xs-5">
               <i id="weather" class="app-info wi"></i>
               <span id="info-rest">
                 <span id="location" class="app-info app-info-nosm truncate"></span>
@@ -53,12 +55,13 @@
                   <span id="slurs"></span>
                 </span>
               </span>
+              <i id="showRdgs" class="app-info btn glyphicon glyphicon-eye-open" title="highlight source-specific elements"></i>
             </div>
-            <div class="col-md-4 col-xs-9 text-right">
+            <div class="col-md-4 col-xs-7 text-right">
               <div id="mm_dropdown" class="btn-group">
                 <button type="button" class="app-info btn dropdown-toggle"
                 data-toggle="dropdown">
-                  <span class="xl-only">Go to measure</span> <img class="xs-only" src="images/measure.png" width="40px"/></span>
+                  <span class="l-only">Go to measure</span> <img class="xs-only" src="images/measure.png" width="40px"/></span>
                 </button>
                 <ul class="dropdown-menu scrollable-menu" id="measurelist">
                 </ul>
