@@ -40,6 +40,7 @@ var vrvPage = 1;
 var startMeasure = -1;
 var meiData;
 var anacrusis = true;
+var highlightRdgs = false;
 
 function getMeasureFromHash(hash) {
   startMeasure = parseInt(window.location.hash.substring(2)), 1;
@@ -106,12 +107,27 @@ $(document).ready(function(){
     closeMenus();
   });
 
+  $("#showRdgs").click(function(e){
+    var rdgs = $(".rdg");
+    if (rdgs.hasClass("svg-highlighted")){
+      rdgs.removeClass("svg-highlighted");
+      highlightRdgs = false;
+    } else {
+      higlightRdgs();
+      highlightRdgs = true;
+    }
+  });
+
 })
 
 function clearHash() {
   // clear hash
   // (eventually you could determine the first measure and updated it accordingly)
   window.location.hash = "";
+}
+
+function higlightRdgs() {
+  $(".rdg").addClass("svg-highlighted");
 }
 
 function adjustPageAreaControls() {
@@ -305,6 +321,7 @@ function nextPage() {
     clearHash();
     vrvPage = vrvPage+1
     renderPage(vrvPage)
+    if (highlightRdgs) higlightRdgs()
   }
 }
 
@@ -313,5 +330,6 @@ function prevPage() {
     clearHash();
     vrvPage = vrvPage-1
     renderPage(vrvPage)
+    if (highlightRdgs) higlightRdgs()
   }
 }

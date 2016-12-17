@@ -11,6 +11,18 @@ a, a.active, a:active, a:focus, a:hover {
     outline: 0;
 }
 
+.svg-highlighted {
+  fill: #e50000;
+}
+
+#credits {
+  font-size: 10px;
+}
+
+.l-only {
+  display: none;
+}
+
 .xl-only {
   display: none;
 }
@@ -197,7 +209,7 @@ a, a.active, a:active, a:focus, a:hover {
 }
 
 @media (min-width: 768px) {
-  .xl-only {
+  .l-only {
     display: inline;
   }
   .xs-only {
@@ -209,6 +221,9 @@ a, a.active, a:active, a:focus, a:hover {
 }
 
 @media (min-width: 1024px) {
+  .xl-only {
+    display: inline;
+  }
   #weather {
     background-color: transparent;
     cursor: default;
