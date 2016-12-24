@@ -16,7 +16,7 @@ a, a.active, a:active, a:focus, a:hover {
 }
 
 #credits {
-  font-size: 10px;
+  font-size: 5px;
 }
 
 .l-only {
@@ -103,13 +103,13 @@ a, a.active, a:active, a:focus, a:hover {
   display: inline-block;
   padding: 0 5px;
   margin-bottom: 0;
-  line-height: 50px !important;
+  line-height: 40px !important;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   border: 1px Solid White;
-  min-width: 50px;
-  height: 50px;
+  min-width: 40px;
+  height: 40px;
   border-radius: 4px;
   background-color: transparent;
 }
@@ -208,7 +208,25 @@ a, a.active, a:active, a:focus, a:hover {
   width: 250px
 }
 
+#showRdgs, #locchange {
+  display: none;
+}
+
+@media (min-width: 375px) {
+  #showRdgs, #locchange {
+    display: inline-block;
+  }
+  .app-info {
+    line-height: 50px !important;
+    min-width: 50px;
+    height: 50px;
+  }
+}
+
 @media (min-width: 768px) {
+  #credits {
+    font-size: 8px;
+  }
   .l-only {
     display: inline;
   }
@@ -221,6 +239,9 @@ a, a.active, a:active, a:focus, a:hover {
 }
 
 @media (min-width: 1024px) {
+  #credits {
+    font-size: 10px;
+  }
   .xl-only {
     display: inline;
   }
