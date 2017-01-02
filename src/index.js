@@ -111,7 +111,7 @@ $(document).ready(function(){
     var rdgs = $(".rdg");
     if (rdgs.hasClass("svg-highlighted")){
       rdgs.removeClass("svg-highlighted");
-      highlightRdgs = false;
+      highlightRdgs = true;
     } else {
       higlightRdgs();
       highlightRdgs = true;
@@ -245,10 +245,11 @@ function updateInfo(data){
       }
 
     }
-    $("#location").html(loctext.join(",   "))
+    $("#location").html(loctext.join(", "))
       .attr("title", loctext)
   })
-  $("#weather").addClass(weatherIconsMap[data.currently.icon])
+  $("#weather-ico").removeClass().addClass("wi")
+  $("#weather-ico").addClass(weatherIconsMap[data.currently.icon])
     .attr("title", data.currently.icon.replace(/-/g, " "))
   $("#slurs").text(sourceNames[source])
 }
